@@ -46,6 +46,15 @@ public class MyBinarySearchTree {
         }
     }
 
+    TreeNode traverse(TreeNode node){
+        if(node!=null){
+            traverse(node.left);
+            System.out.println(node.data);
+            traverse(node.right);
+        }
+        return node;
+    }
+
     public static void main(String[] args) {
 
         MyBinarySearchTree tree = new MyBinarySearchTree();
